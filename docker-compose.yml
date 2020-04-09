@@ -30,7 +30,7 @@ services:
     ports:
       - "6379:6379"
     volumes:
-      - /home/zilliz_support/lcl/video-demo/mnt/redis/data:/data
+      - /mnt/redis/data:/data
     command: redis-server --appendonly yes
     networks:
       - app
@@ -40,7 +40,7 @@ services:
       - "19530:19530"
       - "8080:8080"
     volumes:
-      - /home/zilliz_support/lcl/video-demo/mnt/milvus/db:/var/lib/milvus/db
+      - /mnt/milvus/db:/var/lib/milvus/db
     networks:
       - app
   minio:
@@ -48,7 +48,7 @@ services:
     ports:
       - "9000:9000"
     volumes:
-      - /home/zilliz_support/lcl/video-demo/mnt/minio/data:/data
+      - /mnt/minio/data:/data
     command: ["server","/data"]
     networks:
       - app
