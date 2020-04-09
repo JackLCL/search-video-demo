@@ -6,7 +6,7 @@
 ## Docker compose 
 | name | default | detail|
 |--|--|--|
-|MINIO_ADDR |192.168.1.10:9000| Can't use 127.0.0.1 or localhost|
+|MINIO_ADDR |192.168.1.38:9000| Can't use 127.0.0.1 or localhost|
 |UPLOAD_FOLDER|/tmp|Upload tmp file|
 |MILVUS_ADDR|| Can't use 127.0.0.1 or localhost|
 |VIDEO_REDIS_ADDR||Can't use 127.0.0.1 or localhost|
