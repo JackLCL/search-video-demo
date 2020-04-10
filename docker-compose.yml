@@ -3,7 +3,7 @@ services:
   demo:
     image: milvus.io/search-video-demo:v1
     ports:
-      - "8002:80"
+      - "8001:80"
     networks:
       - app
     depends_on:
