@@ -13,8 +13,8 @@ class MilvusOperator:
         self.client.disconnect()
 
     def milvus_client(self):
-        milvus = Milvus()
-        status = milvus.connect(self.addr, self.port)
+        milvus = Milvus(host=self.addr, port=self.port)
+        # status = milvus.connect(self.addr, self.port)
         if status.code != 0:
             # TODO error
             return ""
