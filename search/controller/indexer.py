@@ -13,12 +13,13 @@ class MilvusOperator:
         self.client.disconnect()
 
     def milvus_client(self):
-        milvus = Milvus(host=self.addr, port=self.port)
-        # status = milvus.connect(self.addr, self.port)
-        if status.code != 0:
-            # TODO error
-            return ""
-        return milvus
+        try:
+            milvus = Milvus(host=self.addr, port=self.port)
+            return milvus
+        except Exception as e:
+            print(e)
+
+        
 
     def check_before_use(self):
         status, exists = self.client.has_collection(DEFAULT_MILVUS_TABLE_NAME)
