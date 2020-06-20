@@ -35,7 +35,7 @@ services:
     networks:
       - app
   milvus:
-    image: milvusdb/milvus:0.7.1-cpu-d040120-d2fad1
+    image: milvusdb/milvus:0.10.0-cpu-d061620-5f3c00
     ports:
       - "19530:19530"
       - "8080:8080"
